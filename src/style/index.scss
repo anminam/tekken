@@ -1,21 +1,31 @@
 @import './reset.css';
+@import './person.scss';
 
-.__video {
-    height: 100%;
-    // width: 100%;
+._video {
+    height: 100vh;
+    width: 100vw;
     float: left;
     top: 0;
     padding: none;
+    object-fit: cover;
     position: fixed; /* optional depending on what you want to do in your app */
 }
 
-.__members__container {
-    height: 100vh;
-    width: 100vw;
+._members_container {
+    height: 50vh;
+    width: 50vw;
     position: absolute;
     top: 0;
     left: 0;
-    background: #225470;
-    z-index: 1;
-    opacity: 0.65;
+    // background: #225470;
+    // z-index: 1;
+    // opacity: 0.65;
+}
+
+
+._test_container {
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 10;
 }

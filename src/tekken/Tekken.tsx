@@ -1,13 +1,15 @@
 import React from 'react';
 import Background from "components/Background";
-import MemberList from "components/MemberList";
+import Persons from "components/Persons";
+import TestContainer from 'components/TestContainer';
 
 const Tekken = () => {
 
     return (
         <div>
             <Background />
-            <MemberList />
+            <Persons />
+            <TestContainer />
             철권이다
         </div>
     )

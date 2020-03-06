@@ -9,7 +9,7 @@ const Background = () => {
                 <source src={videoSrc} type="video/mp4" />
                 안나와
             </video> */}
-            <video src={videoSrc} autoPlay={true} loop={true} muted className={'__video'}>
+            <video src={videoSrc} autoPlay={true} loop={true} muted className={'_video'}>
             </video>
         </div>
     )
