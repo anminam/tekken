@@ -1,0 +1,24 @@
+import { SELET_PERSON } from "actions";
+import tk from 'core/Tk';
+import Person from "core/Person";
+
+export interface IMainType {
+    seletedIndex: string
+}
+const init:IMainType = {
+    seletedIndex: '-1'
+}
+
+const Main = (state = init, action:any) => {
+    switch(action.type) {
+        case SELET_PERSON:
+            return {
+                ...state,
+                seletedIndex: action.index
+            }
+        default:
+            return state;
+    }
+}
+
+export default Main;

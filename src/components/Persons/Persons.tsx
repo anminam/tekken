@@ -8,7 +8,7 @@ const Persons = ({persons}:{persons:Person[]}) => {
     return (
         <div className="persons_container">
             {
-                persons && persons.map((item:Person) => <PersonComponent key={item.index} name={item.name} />)
+                persons && persons.map((item:Person) => <PersonComponent key={item.index} index={item.index} name={item.name} />)
             }
             {/* <div className="_filter"></div> */}
         </div>

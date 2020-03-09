@@ -4,6 +4,8 @@ import Persons from "./Persons";
 import Person from "core/Person";
 import {ITestType} from "reducers/Test";
 
+import {selectPerson} from "actions/Main";
+
 const mapStateToProps = (state:any, other:any) => {
 
     return {
@@ -12,6 +14,7 @@ const mapStateToProps = (state:any, other:any) => {
 }
 const mapDispatchToProps = (dispatch:any, other:any) => {
     return {
+        selectPerson: (index:number) => dispatch(selectPerson(index))
     }
 }
 
