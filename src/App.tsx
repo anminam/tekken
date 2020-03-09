@@ -2,6 +2,7 @@ import React from 'react';
 // import logo from './logo.svg';
 // import 'App.css';
 import Tekken from 'tekken/Tekken';
+import Tktest from "tktest/Tktest";
 import {createStore, applyMiddleware}from 'redux';
 import reducers from "reducers";
 import { Provider } from 'react-redux';
@@ -22,6 +23,7 @@ function App() {
 
         </header>
         <Tekken></Tekken>
+        {/* <Tktest /> */}
       </div>
     </Provider>
   );

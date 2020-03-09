@@ -1,0 +1,37 @@
+.test-container {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-flow: wrap;
+    
+    .item {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 50px;
+
+        .child-item {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            background-color: red;
+            &:hover {
+                // background-color: yellow;
+                transition: transform 100ms linear;
+                // transform-origin: 0 0;
+                transform: scale(1.2)
+            }
+
+            + .e1 {
+                background-color: black;
+            }
+        }
+    }
+}

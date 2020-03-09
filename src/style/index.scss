@@ -1,5 +1,6 @@
 @import './reset.css';
 @import './person.scss';
+@import './test.scss';
 
 ._video {
     height: 100vh;
@@ -11,16 +12,16 @@
     position: fixed; /* optional depending on what you want to do in your app */
 }
 
-._members_container {
-    height: 50vh;
-    width: 50vw;
-    position: absolute;
-    top: 0;
-    left: 0;
-    // background: #225470;
-    // z-index: 1;
-    // opacity: 0.65;
-}
+// ._members_container {
+//     height: 50vh;
+//     width: 50vw;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     // background: #225470;
+//     // z-index: 1;
+//     // opacity: 0.65;
+// }
 
 
 ._test_container {

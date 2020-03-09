@@ -7,10 +7,9 @@ const Tekken = () => {
 
     return (
         <div>
-            <Background />
+            {/* <Background /> */}
             <Persons />
             <TestContainer />
-            철권이다
         </div>
     )
 }
