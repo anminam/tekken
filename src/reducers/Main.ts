@@ -3,10 +3,10 @@ import tk from 'core/Tk';
 import Person from "core/Person";
 
 export interface IMainType {
-    seletedIndex: string
+    seletedIndex: number
 }
 const init:IMainType = {
-    seletedIndex: '-1'
+    seletedIndex: -1
 }
 
 const Main = (state = init, action:any) => {
@@ -14,7 +14,7 @@ const Main = (state = init, action:any) => {
         case SELET_PERSON:
             return {
                 ...state,
-                seletedIndex: action.index
+                seletedIndex: action.payload
             }
         default:
             return state;

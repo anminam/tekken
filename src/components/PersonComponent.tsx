@@ -1,9 +1,16 @@
 import React from "react";
 
-const PersonComponent = ({name, index, selectPerson}:{name:string, index:number, selectPerson:any }) => {
+export interface IPersonComponent {
+    name:string,
+    index:number,
+    selectPerson:any,
+    isSeleted:boolean
+}
+
+const PersonComponent = ({name, index, selectPerson, isSeleted}:IPersonComponent) => {
     return (
-        <div className="_person" onClick={abc} onMouseOver={()=> mouseOver({selectPerson, index})}>
-            <div className="person-frame" />
+        <div className={`_person`} onClick={abc} onMouseOver={()=> mouseOver({selectPerson, index})}>
+            <div className={`person-frame ${isSeleted ? '__selected' : '' }`} />
             <div>{name}</div>
         </div>
     )

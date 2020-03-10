@@ -9,7 +9,8 @@ import {selectPerson} from "actions/Main";
 const mapStateToProps = (state:any, other:any) => {
 
     return {
-        persons: state.test.persons
+        persons: state.test.persons,
+        seletedIndex: state.main.seletedIndex
     }
 }
 const mapDispatchToProps = (dispatch:any, other:any) => {
