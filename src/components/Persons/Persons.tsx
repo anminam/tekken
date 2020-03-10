@@ -3,10 +3,10 @@ import Person from "core/Person";
 import PersonComponent from 'components/PersonComponent';
 import {IStateFromProps, IDispatchFromProps} from './index'
 
-type Persons = IStateFromProps & IDispatchFromProps;
+type IPersons = IStateFromProps & IDispatchFromProps;
 
 
-const Persons = ({persons, seletedIndex, selectPerson}:Persons) => {
+const Persons = ({persons, seletedIndex, selectPerson}: IPersons) => {
     return (
         <div className="persons_container">
             {

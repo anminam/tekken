@@ -19,7 +19,7 @@ $item-height: 150px;
         align-items: center;
 
         // background-color: cornflowerblue;
-        &:hover {
+        &.__selected {
             transition: transform 100ms linear;
             transform: scale(1.2);
         }

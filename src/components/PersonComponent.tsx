@@ -9,7 +9,7 @@ export interface IPersonComponent {
 
 const PersonComponent = ({name, index, selectPerson, isSeleted}:IPersonComponent) => {
     return (
-        <div className={`_person`} onClick={abc} onMouseOver={()=> mouseOver({selectPerson, index})}>
+        <div className={`_person ${isSeleted ? '__selected' : '' }`} onClick={abc} onMouseOver={()=> mouseOver({selectPerson, index})}>
             <div className={`person-frame ${isSeleted ? '__selected' : '' }`} />
             <div>{name}</div>
         </div>

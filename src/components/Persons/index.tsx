@@ -1,8 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
-import Persons from "./Persons";
 import Person from "core/Person";
-import {ITestType} from "reducers/Test";
+import Persons from "./Persons";
 
 import {selectPerson} from "actions/Main";
 
@@ -22,6 +21,7 @@ const mapStateToProps = (state:any, other:any) : IStateFromProps => {
         seletedIndex: state.main.seletedIndex
     }
 }
+
 const mapDispatchToProps = (dispatch:any, other:any) : IDispatchFromProps => {
     return {
         selectPerson: (index:number) => dispatch(selectPerson(index))
@@ -29,7 +29,7 @@ const mapDispatchToProps = (dispatch:any, other:any) : IDispatchFromProps => {
 }
 
 
-export default connect<IStateFromProps, IDispatchFromProps, void>(
+export default connect<IStateFromProps, IDispatchFromProps>(
     mapStateToProps,
     mapDispatchToProps
 )(Persons);
