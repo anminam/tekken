@@ -8,6 +8,7 @@ class Person {
     constructor(name:string) {
         this.name = name;
         this.index = ++Person.makeindex;
+        this.src = '';
     }
 
     

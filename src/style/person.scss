@@ -28,7 +28,7 @@ $item-height: 150px;
 }
 
 
-$anime-time: 2s;
+$anime-time: 1.5s;
 
 $box-size: 200px;
 $main-color: #b80d57;
@@ -115,7 +115,7 @@ $frame-full-height: $item-height + (-$clip-distance * 2);
     }
 }
   
-  @keyframes clipMe {
+@keyframes clipMe {
     0%, 100% {clip: rect(0, $frame-full-width , $clip-distance2 , 0);
         color: #eda0f0;
     }
@@ -129,8 +129,3 @@ $frame-full-height: $item-height + (-$clip-distance * 2);
     color: #6fc9e7}
   }
   
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }

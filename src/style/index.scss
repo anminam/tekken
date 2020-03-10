@@ -1,5 +1,6 @@
 @import './reset.css';
 @import './person.scss';
+@import './bigPerson.scss';
 @import './test.scss';
 
 ._video {
@@ -29,4 +30,10 @@
     top:0;
     left:0;
     z-index: 10;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }

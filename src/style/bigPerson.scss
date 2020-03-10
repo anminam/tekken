@@ -1,0 +1,20 @@
+.big_person_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  .__item {
+    // background-color: red;
+  }
+
+  .__img {
+    height: 300px;
+    width: 300px;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+}
