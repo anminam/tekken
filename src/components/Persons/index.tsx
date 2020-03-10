@@ -6,18 +6,30 @@ import {ITestType} from "reducers/Test";
 
 import {selectPerson} from "actions/Main";
 
-const mapStateToProps = (state:any, other:any) => {
+export interface IStateFromProps {
+    persons: Person[];
+    seletedIndex: number;
+}
+  
+export interface IDispatchFromProps {
+    selectPerson: (index:number) => void;
+}
 
+
+const mapStateToProps = (state:any, other:any) : IStateFromProps => {
     return {
         persons: state.test.persons,
         seletedIndex: state.main.seletedIndex
     }
 }
-const mapDispatchToProps = (dispatch:any, other:any) => {
+const mapDispatchToProps = (dispatch:any, other:any) : IDispatchFromProps => {
     return {
         selectPerson: (index:number) => dispatch(selectPerson(index))
     }
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Persons);
+export default connect<IStateFromProps, IDispatchFromProps, void>(
+    mapStateToProps,
+    mapDispatchToProps
+)(Persons);

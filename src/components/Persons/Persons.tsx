@@ -1,16 +1,12 @@
 import React from 'react';
 import Person from "core/Person";
 import PersonComponent from 'components/PersonComponent';
-import {ITestType} from "reducers/Test";
+import {IStateFromProps, IDispatchFromProps} from './index'
 
-export interface IPersons {
-    persons:Person[],
-    seletedIndex:number,
-    selectPerson:any
-}
+type Persons = IStateFromProps & IDispatchFromProps;
 
 
-const Persons = ({persons, seletedIndex, selectPerson}:IPersons) => {
+const Persons = ({persons, seletedIndex, selectPerson}:Persons) => {
     return (
         <div className="persons_container">
             {
