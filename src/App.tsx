@@ -7,10 +7,13 @@ import {createStore, applyMiddleware}from 'redux';
 import reducers from "reducers";
 import { Provider } from 'react-redux';
 import {composeWithDevTools} from 'redux-devtools-extension';
+import Logger from 'lib/loggerMiddleware';
+import Thunk from 'redux-thunk';
 
 
 /* eslint-disable no-underscore-dangle */
-const store = createStore(reducers,composeWithDevTools());
+const store = createStore(reducers,
+  composeWithDevTools(applyMiddleware(Logger,Thunk)));
 /* eslint-enable */
 
 function App() {
