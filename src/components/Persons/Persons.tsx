@@ -12,7 +12,7 @@ const Persons = ({persons, seletedIndex, selectPerson}: IPersons) => {
             {
                 persons && persons.map((item:Person, i) => {
                     let isSeleted = false;
-                    if (seletedIndex === i + 1) {
+                    if (seletedIndex === i) {
                         isSeleted = true;
                     }
                     return <PersonComponent key={item.index} index={item.index} name={item.name} selectPerson={selectPerson} isSeleted={isSeleted}/>

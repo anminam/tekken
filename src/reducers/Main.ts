@@ -1,6 +1,4 @@
 import { SELET_PERSON } from "actions";
-import tk from 'core/Tk';
-import Person from "core/Person";
 
 export interface IMainType {
     seletedIndex: number

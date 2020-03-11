@@ -1,35 +1,25 @@
 import React from 'react';
-import { makePerson } from "actions";
-import { connect } from "react-redux";
-import {Dispatch}from "redux";
 import tk from "core/Tk";
+import Person from 'core/Person';
 
-const BigPerson = ({makePerson}:any) => {
+interface IBigPerson {
+    person?:Person,
+    isOn: boolean
+}
+const BigPerson = ({person, isOn}:IBigPerson) => {
     // const name = 'anminam';
-    const name = 'suckwind';
-    const img = `assets/bigperson/${name}.png`;
+    const iamgePath:string = 'assets/bigperson/';
+    const name:string = person ? person.name : '';
+
+    const img = `${iamgePath}${name}.png`;
     return (
-        <div className="big_person_container">
-            <div className="__item">
+        <div className="big-person-container">
+            <div className={`__item ${isOn ? 'show' : ''}`}>
                 <div className="__img" style={{backgroundImage: `url(${img})`}}></div>
             </div>  
         </div>
     )
 }
 
-const _makePerson = (callback:any) => {
-    const name = tk.makeTestPerson();
-    callback(name);
-}
 
-
-const mapStateToProps = (state:any) => ({
-  count: 1
-});
-const mapDispatchToProps = (dispatch:Dispatch) => {
-    return {
-        makePerson: (name: string) => dispatch(makePerson(name))
-    }
-}
-
-export default connect(mapStateToProps,mapDispatchToProps)(BigPerson);
+export default BigPerson;

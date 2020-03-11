@@ -7,27 +7,25 @@ class Tk {
     private _personList:Person[];
 
 
-    public Utils = Utils;
+    public utils = Utils;
 
     private constructor () {
         this._personList = [];
     }
 
+    tempnum = 0;
     public makeTestPerson () {
         const personNames = [
             'anminam',
-            'an',
-            'jun',
-            'Kim',
-            'Lee',
-            'suckwind',
-            'J',
-            'HunMan',
-            'likly',
-            'park'
+            'insun',
+            'suckwind'
         ];
         
-        const r = this.Utils.random(0, personNames.length -1);
+        // 랜덤
+        let r = this.utils.random(0, personNames.length -1);
+
+        // 순서대로
+        r = this.tempnum++;
         const personName = personNames[r];
         return personName;
     }

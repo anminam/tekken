@@ -1,13 +1,13 @@
 class Person {
     name:string = '';
     src:string = '';
-    index:number = 0;
+    index:number = -1;
 
-    static makeindex:number = 0;
+    static indexNumber:number = -1;
 
     constructor(name:string) {
         this.name = name;
-        this.index = ++Person.makeindex;
+        this.index = ++Person.indexNumber;
         this.src = '';
     }
 

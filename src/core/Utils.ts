@@ -19,16 +19,21 @@ class Utils {
             end: 100,
         }
 
-        if(start) {
+        if(start !== undefined) {
             option.start = start;
         }
         if(end) {
             option.end = end;
         }
         let value = Math.random() * option.end;
-        value = Math.floor(value) + 1;
+        value = Math.floor(value);
 
         return value;
+    }
+
+    public findObj<T,U>(list:any[], key:string, value:U):T {
+        const o = list.find(t => t[key] === value);
+        return o;
     }
     
 }

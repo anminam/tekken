@@ -1,4 +1,8 @@
-.big_person_container {
+
+$img_width: 500px;
+$img_height: 700px;
+
+.big-person-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -6,15 +10,24 @@
 
   .__item {
     // background-color: red;
+    transform: scale(0.3);
+    &.show {
+      // background-color: green;
+      transform: scale(1);
+      transition-duration: 0.3s;
+
+    }
   }
 
   .__img {
-    height: 300px;
-    width: 300px;
+    width: $img_width;
+    height: $img_height;
 
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    
   }
 
 }
