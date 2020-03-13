@@ -31,6 +31,10 @@ class Utils {
         return value;
     }
 
+    assetHelper(path:string):string {
+        return `${process.env.PUBLIC_URL}/assets${path}`;
+    }
+
     public findObj<T,U>(list:any[], key:string, value:U):T {
         const o = list.find(t => t[key] === value);
         return o;

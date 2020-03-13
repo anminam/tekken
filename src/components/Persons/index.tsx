@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Dispatch } from 'react';
 import { connect } from "react-redux";
 import Person from "core/Person";
 import Persons from "./Persons";
@@ -11,7 +11,7 @@ export interface IStateFromProps {
 }
   
 export interface IDispatchFromProps {
-    selectPerson: (index:number) => void;
+    selectPerson: (index:number) => any;
 }
 
 

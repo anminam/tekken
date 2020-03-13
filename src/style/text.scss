@@ -1,0 +1,99 @@
+
+@import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
+
+$font-size: 3rem;
+$text-speed: 400ms;
+
+$shadow-color-1: rgb(32, 32, 32);
+$shadow-color-2: rgb(255, 161, 255);
+$shadow-color-3: rgb(255, 238, 80);
+
+$text-shadow-1: -2px -2px 10px $shadow-color-1;
+$text-shadow-2: 10px -2px 20px $shadow-color-2;
+$text-shadow-3: 20px 0px 30px $shadow-color-3;
+
+.person-name-wapper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+$font-color-1: rgba(88, 88, 88, 0.158);
+
+
+.text-1 {
+    font-size: $font-size;
+    font-family: 'Russo One', sans-serif;
+    color: $font-color-1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: $text-shadow-1;
+    
+    animation-name: mini;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    // -webkit-animation:colorchange 20s infinite alternate;
+    // anmi
+    // text-shadow:   0px -6px 0 #212121,  
+    //                 0px -6px 0 #212121,
+    //                 0px  6px 0 #212121,
+    //                 0px  6px 0 #212121,
+    //                 -6px  0px 0 #212121,  
+    //                 6px  0px 0 #212121,
+    //                 -6px  0px 0 #212121,
+    //                 6px  0px 0 #212121,
+    //                 -6px -6px 0 #212121,  
+    //                 6px -6px 0 #212121,
+    //                 -6px  6px 0 #212121,
+    //                 6px  6px 0 #212121,
+    //                 -6px  18px 0 #212121,
+    //                 0px  18px 0 #212121,
+    //                 6px  18px 0 #212121,
+    //                 0 19px 1px rgba(0,0,0,.1),
+    //                 0 0 6px rgba(0,0,0,.1),
+    //                 0 6px 3px rgba(0,0,0,.3),
+    //                 0 12px 6px rgba(0,0,0,.2),
+    //                 0 18px 18px rgba(0,0,0,.25),
+    //                 0 24px 24px rgba(0,0,0,.2),
+    //                 0 36px 36px rgba(0,0,0,.15);
+    transform: translateX(-100px) scale(1.5);
+    opacity: 0;
+
+    &.__selected {
+        transition-duration: $text-speed;
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+
+}
+
+@keyframes mini {
+    0%, 100% {
+        color: black;
+        text-shadow: $text-shadow-1;
+    }
+    20% {
+        color: rgb(57, 0, 163);
+    }
+    40% {
+        
+    }
+    50% {
+        text-shadow: $text-shadow-2;
+    }
+    60% {
+        color: rgb(0, 84, 105);
+    }
+    80% {
+        color: rgb(59, 59, 59);
+        color: rgb(122, 0, 31);
+        text-shadow: $text-shadow-3;
+    }
+
+}
