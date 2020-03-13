@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/tekken/static/css/main.2591c833.chunk.css",
+    "main.js": "/tekken/static/js/main.85922dcd.chunk.js",
+    "main.js.map": "/tekken/static/js/main.85922dcd.chunk.js.map",
+    "runtime-main.js": "/tekken/static/js/runtime-main.f2c7b606.js",
+    "runtime-main.js.map": "/tekken/static/js/runtime-main.f2c7b606.js.map",
+    "static/js/2.46d075d9.chunk.js": "/tekken/static/js/2.46d075d9.chunk.js",
+    "static/js/2.46d075d9.chunk.js.map": "/tekken/static/js/2.46d075d9.chunk.js.map",
+    "index.html": "/tekken/index.html",
+    "precache-manifest.35c761415bb269be4c013e00be908d0e.js": "/tekken/precache-manifest.35c761415bb269be4c013e00be908d0e.js",
+    "service-worker.js": "/tekken/service-worker.js",
+    "static/css/main.2591c833.chunk.css.map": "/tekken/static/css/main.2591c833.chunk.css.map",
+    "static/js/2.46d075d9.chunk.js.LICENSE.txt": "/tekken/static/js/2.46d075d9.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f2c7b606.js",
+    "static/js/2.46d075d9.chunk.js",
+    "static/css/main.2591c833.chunk.css",
+    "static/js/main.85922dcd.chunk.js"
+  ]
+}
