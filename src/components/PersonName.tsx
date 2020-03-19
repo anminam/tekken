@@ -10,7 +10,7 @@ const PersonName = ({name, isOn}:IPersonName) => {
     return (
         <div className="person-name-wapper">
             <div className={`text-1 ${isOn ? '__selected': ''}`}>
-                {name.toUpperCase()}
+                {name && name.toUpperCase()}
             </div>
         </div>
     )
